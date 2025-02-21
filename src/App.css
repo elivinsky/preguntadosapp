@@ -1,21 +1,22 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
 
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  background-color: #f8f9ff;
+  background-color: #1a1b1e;
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
+  color: #ffffff;
 }
 
 h1 {
-  color: #2b44ff;
+  color: #ffffff;
   font-size: 2.8em;
   margin-bottom: 30px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -1px;
 }
 
@@ -33,19 +34,20 @@ h1 {
 }
 
 .categoria-btn {
-  padding: 24px;
-  font-size: 1.2em;
+  padding: 16px 20px;
+  font-size: 1.1em;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 15px;
   border: none;
-  border-radius: 20px;
+  border-radius: 16px;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  backdrop-filter: brightness(1.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
 }
 
 .categoria-icon {
