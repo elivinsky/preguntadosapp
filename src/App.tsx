@@ -8,12 +8,12 @@ import { MdTheaterComedy } from "react-icons/md";
 import { FaPaintBrush, FaLandmark } from 'react-icons/fa';
 
 const categoryColors = {
-  Geografia: "#2b44ff",
-  Ciencia: "#4cd964",
-  Deportes: "#ff9500",
-  Entretenimiento: "#ff2d55",
-  Arte: "#8e1d1d",
-  Historia: "#ffcc00"
+  Geografia: "#4361ee",
+  Ciencia: "#2ec4b6",
+  Deportes: "#ff6b6b",
+  Entretenimiento: "#ff449f",
+  Arte: "#9d4edd",
+  Historia: "#ffd60a"
 };
 
 const categoryIcons = {
