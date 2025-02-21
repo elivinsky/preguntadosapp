@@ -2,13 +2,25 @@
 import { useState, useEffect } from 'react';
 import questionsData from './data/questions.json';
 import './App.css';
-import { FaGlobeAmericas, FaFlask, FaFootballBall, FaFilm, FaPaintBrush, FaLandmark } from 'react-icons/fa';
+import { IoEarth } from "react-icons/io5";
+import { GiChemicalDrop, GiSoccerBall } from "react-icons/gi";
+import { MdTheaterComedy } from "react-icons/md";
+import { FaPaintBrush, FaLandmark } from 'react-icons/fa';
+
+const categoryColors = {
+  Geografia: "#2b44ff",
+  Ciencia: "#4cd964",
+  Deportes: "#ff9500",
+  Entretenimiento: "#ff2d55",
+  Arte: "#8e1d1d",
+  Historia: "#ffcc00"
+};
 
 const categoryIcons = {
-  Geografia: <FaGlobeAmericas />,
-  Ciencia: <FaFlask />,
-  Deportes: <FaFootballBall />,
-  Entretenimiento: <FaFilm />,
+  Geografia: <IoEarth />,
+  Ciencia: <GiChemicalDrop />,
+  Deportes: <GiSoccerBall />,
+  Entretenimiento: <MdTheaterComedy />,
   Arte: <FaPaintBrush />,
   Historia: <FaLandmark />
 };
@@ -73,6 +85,10 @@ export default function App() {
                 key={categoria}
                 onClick={() => setCategoriaSeleccionada(categoria)}
                 className="categoria-btn"
+                style={{ 
+                  backgroundColor: categoryColors[categoria as keyof typeof categoryColors],
+                  color: 'white'
+                }}
               >
                 <span className="categoria-icon">{categoryIcons[categoria as keyof typeof categoryIcons]}</span>
                 {categoria}
