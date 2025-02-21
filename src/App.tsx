@@ -2,12 +2,12 @@
 import { useState, useEffect } from 'react';
 import questionsData from './data/questions.json';
 import './App.css';
-import { FaGlobeAmericas, FaFlask, FaFutbolBall, FaFilm, FaPaintBrush, FaLandmark } from 'react-icons/fa';
+import { FaGlobeAmericas, FaFlask, FaFootballBall, FaFilm, FaPaintBrush, FaLandmark } from 'react-icons/fa';
 
 const categoryIcons = {
   Geografia: <FaGlobeAmericas />,
   Ciencia: <FaFlask />,
-  Deportes: <FaFutbolBall />,
+  Deportes: <FaFootballBall />,
   Entretenimiento: <FaFilm />,
   Arte: <FaPaintBrush />,
   Historia: <FaLandmark />
