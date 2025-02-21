@@ -2,6 +2,16 @@
 import { useState, useEffect } from 'react';
 import questionsData from './data/questions.json';
 import './App.css';
+import { FaGlobeAmericas, FaFlask, FaFutbolBall, FaFilm, FaPaintBrush, FaLandmark } from 'react-icons/fa';
+
+const categoryIcons = {
+  Geografia: <FaGlobeAmericas />,
+  Ciencia: <FaFlask />,
+  Deportes: <FaFutbolBall />,
+  Entretenimiento: <FaFilm />,
+  Arte: <FaPaintBrush />,
+  Historia: <FaLandmark />
+};
 
 type Categoria = keyof typeof questionsData;
 
@@ -64,6 +74,7 @@ export default function App() {
                 onClick={() => setCategoriaSeleccionada(categoria)}
                 className="categoria-btn"
               >
+                <span className="categoria-icon">{categoryIcons[categoria as keyof typeof categoryIcons]}</span>
                 {categoria}
               </button>
             ))}
@@ -90,8 +101,8 @@ export default function App() {
             </div>
           )}
           <div className="controles">
-            <button onClick={obtenerPreguntaAleatoria}>
-              Siguiente Pregunta
+            <button onClick={() => setCategoriaSeleccionada(null)}>
+              Volver a Categorías
             </button>
             <button onClick={reiniciarJuego}>Reiniciar Juego</button>
           </div>
