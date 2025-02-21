@@ -104,6 +104,15 @@ export default function App() {
   const verificarRespuesta = (opcion: string) => {
     if (dobleChanceUsada) {
       if (opcionesSeleccionadas.length >= 2) return;
+  
+      // Si la primera opción seleccionada es correcta, marcarla como correcta y reproducir el sonido
+      if (opcionesSeleccionadas.length === 0 && opcion === preguntaActual.respuestaCorrecta) {
+        new Audio(correctSound).play();
+        setMostrarRespuesta(true);
+        setRespuestaSeleccionada(opcion);
+        return;
+      }
+  
       setOpcionesSeleccionadas(prev => [...prev, opcion]);
     } else {
       if (opcion === preguntaActual.respuestaCorrecta) {
@@ -115,6 +124,19 @@ export default function App() {
       setMostrarRespuesta(true);
     }
   };
+  
+  useEffect(() => {
+    // Solo ejecutar si la primera opción no fue correcta
+    if (dobleChanceUsada && opcionesSeleccionadas.length === 2) {
+      const esCorrecta = opcionesSeleccionadas.includes(preguntaActual.respuestaCorrecta);
+      if (esCorrecta) {
+        new Audio(correctSound).play();
+      } else {
+        new Audio(incorrectSound).play();
+      }
+      setMostrarRespuesta(true);
+    }
+  }, [opcionesSeleccionadas, dobleChanceUsada, preguntaActual]);
 
   const usarDobleChance = () => {
     if (!preguntaActual || mostrarRespuesta) return;
