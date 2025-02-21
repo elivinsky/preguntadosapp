@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap");
 
 body {
   margin: 0;
@@ -16,7 +16,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 200px;
   color: rgba(147, 112, 219, 0.05);
   display: flex;
@@ -31,7 +31,7 @@ body::after {
   position: fixed;
   bottom: -50px;
   right: -50px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 400px;
   color: rgba(147, 112, 219, 0.03);
   z-index: 0;
@@ -44,12 +44,16 @@ body::after {
   padding: 40px 20px;
   text-align: center;
   min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #ffffff;
   position: relative;
   z-index: 1;
   backdrop-filter: blur(5px);
-  background: linear-gradient(145deg, rgba(26, 27, 30, 0.95), rgba(26, 27, 30, 0.85));
+  background: linear-gradient(
+    145deg,
+    rgba(26, 27, 30, 0.95),
+    rgba(26, 27, 30, 0.85)
+  );
 }
 
 h1 {
@@ -83,10 +87,10 @@ h1 {
   border: none;
   border-radius: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   font-weight: 500;
   letter-spacing: 1px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   text-transform: uppercase;
   backdrop-filter: blur(8px);
   position: relative;
@@ -95,13 +99,17 @@ h1 {
 }
 
 .categoria-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -120,13 +128,13 @@ h1 {
 
 .categoria-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   filter: brightness(1.1);
 }
 
 .categoria-btn:active {
   transform: translateY(2px);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .pregunta {
@@ -134,12 +142,12 @@ h1 {
   margin: 20px auto;
   padding: 25px;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   max-width: 600px;
 }
 
 .pregunta p {
-  font-size: 1.3em;
+  font-size: 1.4em;
   color: #333;
   margin-bottom: 25px;
   line-height: 1.4;
@@ -155,7 +163,7 @@ h1 {
 
 .opcion-btn {
   padding: 15px 20px;
-  font-size: 1.1em;
+  font-size: 1.2em;
   border: 2px solid #e0e0e0;
   border-radius: 12px;
   background-color: white;
@@ -182,6 +190,15 @@ h1 {
   border-color: #da190b;
 }
 
+.descartada {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+}
+
+.opcion-btn.descartada {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+}
 .controles {
   display: flex;
   gap: 15px;
@@ -198,7 +215,11 @@ h1 {
   color: white;
   cursor: pointer;
   transition: all 0.3s;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 
 .controles button:hover {
