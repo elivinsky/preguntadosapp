@@ -1,54 +1,56 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* Estilos generales */
 body {
   margin: 0;
   padding: 0;
   background-color: #1a1b1e;
-  position: relative;
-  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
   min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fondo decorativo con preguntas */
+body::before,
+body::after {
+  content: "?";
+  position: fixed;
+  font-family: "Inter", sans-serif;
+  color: rgba(147, 112, 219, 0.05);
+  z-index: 0;
 }
 
 body::before {
-  content: "?";
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  font-family: "Inter", sans-serif;
   font-size: 200px;
-  color: rgba(147, 112, 219, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 0;
   transform: rotate(-15deg);
 }
 
 body::after {
-  content: "?";
-  position: fixed;
   bottom: -50px;
   right: -50px;
-  font-family: "Inter", sans-serif;
   font-size: 400px;
-  color: rgba(147, 112, 219, 0.03);
-  z-index: 0;
   transform: rotate(15deg);
 }
 
+/* Contenedor principal */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
-  min-height: 100vh;
-  font-family: "Poppins", sans-serif;
-  color: #ffffff;
+  height: 100vh;
+  max-height: max-content;
   position: relative;
   z-index: 1;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   background: linear-gradient(
     145deg,
     rgba(26, 27, 30, 0.95),
@@ -56,46 +58,52 @@ body::after {
   );
 }
 
+/* Título principal */
 h1 {
-  color: #ffffff;
   font-size: 2.8em;
   margin-bottom: 30px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -1px;
+  color: #ffffff;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Selector de categorías */
 .categoria-selector {
-  margin: 30px 0;
+  margin: 60px 0 30px;
 }
 
 .categorias {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 16px 32px;
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 800px;
   padding: 0 20px;
 }
-
 .categoria-btn {
-  padding: 20px 24px;
-  font-size: 1.1em;
+  padding: 24px 32px;
+  font-size: 1.5em;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
   border: none;
   border-radius: 20px;
   transition: all 0.3s ease;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
-  font-family: "Inter", sans-serif;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
 .categoria-btn::before {
@@ -114,45 +122,109 @@ h1 {
   transition: opacity 0.3s ease;
 }
 
+.categoria-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
 .categoria-btn:hover::before {
   opacity: 1;
 }
 
-.categoria-icon {
-  font-size: 2.2em;
-  display: flex;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.categoria-btn:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
 .categoria-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  filter: brightness(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15),
+              0 0 20px rgba(255, 255, 255, 0.2);
+  filter: brightness(1.2);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .categoria-btn:active {
   transform: translateY(2px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1),
+              0 0 10px rgba(255, 255, 255, 0.2);
 }
 
+.categoria-icon {
+  font-size: 1.6em;
+  display: flex;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+.categoria-btn:hover .categoria-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+}
+
+/* Colores específicos para cada categoría */
+.categoria-btn[style*="#2b44ff"] { /* Geografia */
+  background: linear-gradient(145deg, rgba(43, 68, 255, 0.2), rgba(43, 68, 255, 0.1));
+  border-color: rgba(43, 68, 255, 0.5);
+}
+
+.categoria-btn[style*="#4cd964"] { /* Ciencia */
+  background: linear-gradient(145deg, rgba(76, 217, 100, 0.2), rgba(76, 217, 100, 0.1));
+  border-color: rgba(76, 217, 100, 0.5);
+}
+
+.categoria-btn[style*="#ff9500"] { /* Deportes */
+  background: linear-gradient(145deg, rgba(255, 149, 0, 0.2), rgba(255, 149, 0, 0.1));
+  border-color: rgba(255, 149, 0, 0.5);
+}
+
+.categoria-btn[style*="#ff2d55"] { /* Entretenimiento */
+  background: linear-gradient(145deg, rgba(255, 45, 85, 0.2), rgba(255, 45, 85, 0.1));
+  border-color: rgba(255, 45, 85, 0.5);
+}
+
+.categoria-btn[style*="#8e1d1d"] { /* Arte */
+  background: linear-gradient(145deg, rgba(142, 29, 29, 0.2), rgba(142, 29, 29, 0.1));
+  border-color: rgba(142, 29, 29, 0.5);
+}
+
+.categoria-btn[style*="#ffcc00"] { /* Historia */
+  background: linear-gradient(145deg, rgba(255, 204, 0, 0.2), rgba(255, 204, 0, 0.1));
+  border-color: rgba(255, 204, 0, 0.5);
+}
+/* Estilos para la pregunta */
 .pregunta {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
   margin: 20px auto;
   padding: 25px;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   max-width: 600px;
+  backdrop-filter: blur(10px);
 }
 
 .pregunta p {
   font-size: 1.4em;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 25px;
   line-height: 1.4;
 }
 
+/* Estilos para las opciones */
 .opciones {
   display: flex;
   flex-direction: column;
@@ -164,9 +236,10 @@ h1 {
 .opcion-btn {
   padding: 15px 20px;
   font-size: 1.2em;
-  border: 2px solid #e0e0e0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
   cursor: pointer;
   transition: all 0.3s;
   text-align: left;
@@ -174,8 +247,19 @@ h1 {
 }
 
 .opcion-btn:hover {
-  background-color: #f8f9fa;
+  background-color: rgba(255, 255, 255, 0.2);
   transform: translateX(5px);
+}
+
+.opcion-btn.seleccionada {
+  background-color: #ffcc00;
+  border: 2px solid #ff9500;
+  color: #1a1b1e;
+}
+
+.opcion-btn.descartada {
+  background-color: rgba(204, 204, 204, 0.3) !important;
+  cursor: not-allowed;
 }
 
 .opcion-btn.correcta {
@@ -190,20 +274,13 @@ h1 {
   border-color: #da190b;
 }
 
-.descartada {
-  background-color: #ccc !important;
-  cursor: not-allowed;
-}
-
-.opcion-btn.descartada {
-  background-color: #ccc !important;
-  cursor: not-allowed;
-}
+/* Controles */
 .controles {
   display: flex;
   gap: 15px;
   justify-content: center;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .controles button {
@@ -227,8 +304,47 @@ h1 {
   transform: translateY(-2px);
 }
 
+.controles button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Título de la categoría en el juego */
 .juego h2 {
   color: #2b44ff;
   font-size: 1.8em;
   margin-bottom: 20px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  .categorias {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .categoria-btn {
+    padding: 15px 20px;
+    font-size: 1em;
+  }
+
+  .pregunta p {
+    font-size: 1.2em;
+  }
+
+  .opcion-btn {
+    font-size: 1em;
+    padding: 12px 18px;
+  }
+
+  .controles button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
 }

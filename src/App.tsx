@@ -8,6 +8,7 @@ import { MdTheaterComedy } from "react-icons/md";
 import { FaPaintBrush, FaLandmark, FaBomb } from 'react-icons/fa';
 import { RiResetLeftFill } from "react-icons/ri";
 import { LiaBombSolid } from "react-icons/lia";
+import { RxReset } from "react-icons/rx";
 import incorrectSound from './assets/audio/incorrect.mp3';
 import correctSound from './assets/audio/correct.mp3';
 
@@ -37,7 +38,9 @@ export default function App() {
   const [preguntasUsadas, setPreguntasUsadas] = useState<Set<string>>(new Set());
   const [respuestaSeleccionada, setRespuestaSeleccionada] = useState<string | null>(null);
   const [mostrarRespuesta, setMostrarRespuesta] = useState(false);
-  const [opcionesDescartadas, setOpcionesDescartadas] = useState<string[]>([]); // Nuevo estado para opciones descartadas
+  const [opcionesDescartadas, setOpcionesDescartadas] = useState<string[]>([]);
+  const [dobleChanceUsada, setDobleChanceUsada] = useState<boolean>(false);
+  const [opcionesSeleccionadas, setOpcionesSeleccionadas] = useState<string[]>([]);
 
   const categorias = Object.keys(questionsData) as Categoria[];
 
@@ -53,6 +56,28 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem('preguntasUsadas', JSON.stringify(Array.from(preguntasUsadas)));
   }, [preguntasUsadas]);
+
+  // Reiniciar estados al cambiar de pregunta
+  useEffect(() => {
+    if (categoriaSeleccionada) {
+      obtenerPreguntaAleatoria();
+      setDobleChanceUsada(false);
+      setOpcionesSeleccionadas([]);
+    }
+  }, [categoriaSeleccionada]);
+
+  // Reproducir sonido cuando se seleccionan dos opciones en Doble Chance
+  useEffect(() => {
+    if (dobleChanceUsada && opcionesSeleccionadas.length === 2) {
+      const esCorrecta = opcionesSeleccionadas.includes(preguntaActual.respuestaCorrecta);
+      if (esCorrecta) {
+        new Audio(correctSound).play();
+      } else {
+        new Audio(incorrectSound).play();
+      }
+      setMostrarRespuesta(true);
+    }
+  }, [opcionesSeleccionadas, dobleChanceUsada, preguntaActual]);
 
   const obtenerPreguntaAleatoria = () => {
     if (!categoriaSeleccionada) return;
@@ -73,18 +98,27 @@ export default function App() {
 
     setPreguntaActual(preguntaRandom);
     setPreguntasUsadas(prev => new Set(prev).add(preguntaRandom.pregunta));
-    setOpcionesDescartadas([]); // Reiniciar opciones descartadas al obtener una nueva pregunta
+    setOpcionesDescartadas([]);
   };
 
   const verificarRespuesta = (opcion: string) => {
-    // Reproducir sonido según si la respuesta es correcta o incorrecta
-    if (opcion === preguntaActual.respuestaCorrecta) {
-      new Audio(correctSound).play();
+    if (dobleChanceUsada) {
+      if (opcionesSeleccionadas.length >= 2) return;
+      setOpcionesSeleccionadas(prev => [...prev, opcion]);
     } else {
-      new Audio(incorrectSound).play();
+      if (opcion === preguntaActual.respuestaCorrecta) {
+        new Audio(correctSound).play();
+      } else {
+        new Audio(incorrectSound).play();
+      }
+      setRespuestaSeleccionada(opcion);
+      setMostrarRespuesta(true);
     }
-    setRespuestaSeleccionada(opcion);
-    setMostrarRespuesta(true);
+  };
+
+  const usarDobleChance = () => {
+    if (!preguntaActual || mostrarRespuesta) return;
+    setDobleChanceUsada(true);
   };
 
   const reiniciarJuego = () => {
@@ -97,27 +131,18 @@ export default function App() {
   const usarBomba = () => {
     if (!preguntaActual || mostrarRespuesta) return;
 
-    // Filtrar las opciones incorrectas que no han sido descartadas
     const opcionesIncorrectas = preguntaActual.opciones.filter(
       (opcion: string) =>
         opcion !== preguntaActual.respuestaCorrecta &&
         !opcionesDescartadas.includes(opcion)
     );
 
-    // Seleccionar 2 opciones incorrectas al azar
     const opcionesADescartar = opcionesIncorrectas
       .sort(() => Math.random() - 0.5)
       .slice(0, 2);
 
-    // Actualizar el estado de opciones descartadas
     setOpcionesDescartadas(prev => [...prev, ...opcionesADescartar]);
   };
-
-  useEffect(() => {
-    if (categoriaSeleccionada) {
-      obtenerPreguntaAleatoria();
-    }
-  }, [categoriaSeleccionada]);
 
   return (
     <main className="container">
@@ -156,6 +181,7 @@ export default function App() {
               <div className="opciones">
                 {preguntaActual.opciones.map((opcion: string) => {
                   const estaDescartada = opcionesDescartadas.includes(opcion);
+                  const estaSeleccionada = opcionesSeleccionadas.includes(opcion);
                   return (
                     <button
                       key={opcion}
@@ -165,8 +191,8 @@ export default function App() {
                         : mostrarRespuesta && opcion === respuestaSeleccionada
                           ? 'incorrecta'
                           : ''
-                        } ${estaDescartada ? 'descartada' : ''}`}
-                      disabled={mostrarRespuesta || estaDescartada}
+                        } ${estaDescartada ? 'descartada' : ''} ${estaSeleccionada ? 'seleccionada' : ''}`}
+                      disabled={mostrarRespuesta || estaDescartada || (dobleChanceUsada && opcionesSeleccionadas.length >= 2)}
                     >
                       {opcion}
                     </button>
@@ -183,8 +209,7 @@ export default function App() {
               }}
             >
               {React.createElement(IoIosArrowBack as React.ComponentType)}
-
-              Volver a Categorías
+              Volver
             </button>
             <button
               className='bomb-btn'
@@ -195,10 +220,18 @@ export default function App() {
               Bomba
             </button>
             <button
+              onClick={usarDobleChance}
+              className={`doble-chance-btn ${dobleChanceUsada ? 'usada' : ''}`}
+              disabled={mostrarRespuesta || dobleChanceUsada}
+            >
+              {React.createElement(RxReset as React.ComponentType)}
+              Doble
+            </button>
+            <button
               onClick={reiniciarJuego}
             >
               {React.createElement(RiResetLeftFill as React.ComponentType)}
-              Reiniciar Juego
+              Reiniciar
             </button>
           </div>
         </div>
