@@ -1,9 +1,9 @@
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import questionsData from './data/questions.json';
 import './App.css';
 import { IoEarth } from "react-icons/io5";
-import { GiChemicalDrop, GiSoccerBall } from "react-icons/gi";
+import { GiChemicalDrop as GiChemicalDropIcon, GiSoccerBall } from "react-icons/gi";
 import { MdTheaterComedy } from "react-icons/md";
 import { FaPaintBrush, FaLandmark } from 'react-icons/fa';
 
@@ -17,12 +17,12 @@ const categoryColors = {
 };
 
 const categoryIcons = {
-  Geografia: <IoEarth />,
-  Ciencia: <GiChemicalDrop />,
-  Deportes: <GiSoccerBall />,
-  Entretenimiento: <MdTheaterComedy />,
-  Arte: <FaPaintBrush />,
-  Historia: <FaLandmark />
+  Geografia: IoEarth,
+  Ciencia: GiChemicalDropIcon,
+  Deportes: GiSoccerBall,
+  Entretenimiento: MdTheaterComedy,
+  Arte: FaPaintBrush,
+  Historia: FaLandmark
 };
 
 type Categoria = keyof typeof questionsData;
@@ -38,7 +38,7 @@ export default function App() {
 
   const obtenerPreguntaAleatoria = () => {
     if (!categoriaSeleccionada) return;
-    
+
     const preguntasCategoria = questionsData[categoriaSeleccionada];
     const preguntasDisponibles = preguntasCategoria.filter(
       p => !preguntasUsadas.has(p.pregunta)
@@ -52,7 +52,7 @@ export default function App() {
     const preguntaRandom = preguntasDisponibles[
       Math.floor(Math.random() * preguntasDisponibles.length)
     ];
-    
+
     setPreguntaActual(preguntaRandom);
     setPreguntasUsadas(prev => new Set(prev).add(preguntaRandom.pregunta));
   };
@@ -77,7 +77,7 @@ export default function App() {
   return (
     <main className="container">
       <h1>Juego de Preguntas</h1>
-      
+
       {!categoriaSeleccionada ? (
         <div className="categoria-selector">
           <h2>Selecciona una categoría:</h2>
@@ -87,12 +87,16 @@ export default function App() {
                 key={categoria}
                 onClick={() => setCategoriaSeleccionada(categoria)}
                 className="categoria-btn"
-                style={{ 
+                style={{
                   backgroundColor: categoryColors[categoria as keyof typeof categoryColors],
                   color: 'white'
                 }}
               >
-                <span className="categoria-icon">{categoryIcons[categoria as keyof typeof categoryIcons]}</span>
+                <span className="categoria-icon">{
+                  categoryIcons[categoria]
+                    ? React.createElement(categoryIcons[categoria] as React.ComponentType)
+                    : null
+                }</span>
                 {categoria}
               </button>
             ))}
@@ -109,13 +113,12 @@ export default function App() {
                   <button
                     key={opcion}
                     onClick={() => verificarRespuesta(opcion)}
-                    className={`opcion-btn ${
-                      mostrarRespuesta && opcion === preguntaActual.respuestaCorrecta
-                        ? 'correcta'
-                        : mostrarRespuesta && opcion === respuestaSeleccionada
+                    className={`opcion-btn ${mostrarRespuesta && opcion === preguntaActual.respuestaCorrecta
+                      ? 'correcta'
+                      : mostrarRespuesta && opcion === respuestaSeleccionada
                         ? 'incorrecta'
                         : ''
-                    }`}
+                      }`}
                   >
                     {opcion}
                   </button>
