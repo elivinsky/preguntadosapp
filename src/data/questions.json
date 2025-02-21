@@ -111,7 +111,7 @@
     {"pregunta": "¿En qué deporte se usa un balón de cuero de 7 kg?", "opciones": ["Rugby", "Fútbol", "Waterpolo", "Balonmano"], "respuestaCorrecta": "Waterpolo"},
     {"pregunta": "¿Quién es el máximo anotador en la historia de la NBA?", "opciones": ["LeBron James", "Michael Jordan", "Kareem Abdul-Jabbar", "Kobe Bryant"], "respuestaCorrecta": "Kareem Abdul-Jabbar"},
     {"pregunta": "¿Cuántos jugadores conforman un equipo de voleibol en cancha?", "opciones": ["4", "5", "6", "7"], "respuestaCorrecta": "6"},
-    {"pregunta": "¿Qué país es el máximo ganador de la Copa América?", "opciones": ["Brasil", "Argentina", "Uruguay", "Chile"], "respuestaCorrecta": "Uruguay"},
+    {"pregunta": "¿Qué país es el máximo ganador de la Copa América?", "opciones": ["Brasil", "Argentina", "Uruguay", "Chile"], "respuestaCorrecta": "Argentina"},
     {"pregunta": "¿Cuál es el torneo de tenis más antiguo del mundo?", "opciones": ["Roland Garros", "Wimbledon", "US Open", "Australian Open"], "respuestaCorrecta": "Wimbledon"},
     {"pregunta": "¿En qué deporte se otorga la chaqueta verde al ganador?", "opciones": ["Golf", "Tenis", "Atletismo", "Polo"], "respuestaCorrecta": "Golf"},
     {"pregunta": "¿Cuál es el equipo con más títulos de la UEFA Champions League?", "opciones": ["FC Barcelona", "Bayern Múnich", "Real Madrid", "Manchester United"], "respuestaCorrecta": "Real Madrid"},
