@@ -29,25 +29,24 @@ h1 {
 }
 
 .categoria-btn {
-  padding: 30px;
+  padding: 20px;
   font-size: 1.2em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 15px;
   border: none;
   border-radius: 15px;
-  transition: transform 0.2s, filter 0.3s;
+  transition: transform 0.2s;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .categoria-icon {
-  font-size: 2.5em;
+  font-size: 2em;
   display: block;
   color: white;
   cursor: pointer;
-  transition: transform 0.2s, background-color 0.3s;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
 }
 
 .categoria-btn:hover {
