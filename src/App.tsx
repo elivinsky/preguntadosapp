@@ -9,8 +9,6 @@ export default function App() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState<Categoria | null>(null);
   const [preguntaActual, setPreguntaActual] = useState<any>(null);
   const [preguntasUsadas, setPreguntasUsadas] = useState<Set<string>>(new Set());
-  const [respuestaSeleccionada, setRespuestaSeleccionada] = useState<string | null>(null);
-  const [mostrarRespuesta, setMostrarRespuesta] = useState(false);
 
   const categorias = Object.keys(questionsData) as Categoria[];
 
@@ -85,14 +83,8 @@ export default function App() {
                 {preguntaActual.opciones.map((opcion: string) => (
                   <button
                     key={opcion}
-                    onClick={() => verificarRespuesta(opcion)}
-                    disabled={mostrarRespuesta}
                     className={`opcion-btn ${
-                      mostrarRespuesta && opcion === preguntaActual.respuestaCorrecta
-                        ? 'correcta'
-                        : mostrarRespuesta && opcion === respuestaSeleccionada
-                        ? 'incorrecta'
-                        : ''
+                      opcion === preguntaActual.respuestaCorrecta ? 'correcta' : ''
                     }`}
                   >
                     {opcion}
@@ -102,7 +94,7 @@ export default function App() {
             </div>
           )}
           <div className="controles">
-            <button onClick={obtenerPreguntaAleatoria} disabled={!mostrarRespuesta}>
+            <button onClick={obtenerPreguntaAleatoria}>
               Siguiente Pregunta
             </button>
             <button onClick={reiniciarJuego}>Reiniciar Juego</button>
