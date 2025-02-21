@@ -31,8 +31,6 @@ export default function App() {
     
     setPreguntaActual(preguntaRandom);
     setPreguntasUsadas(prev => new Set(prev).add(preguntaRandom.pregunta));
-    setRespuestaSeleccionada(null);
-    setMostrarRespuesta(false);
   };
 
   const verificarRespuesta = (opcion: string) => {
@@ -44,8 +42,6 @@ export default function App() {
     setPreguntasUsadas(new Set());
     setCategoriaSeleccionada(null);
     setPreguntaActual(null);
-    setRespuestaSeleccionada(null);
-    setMostrarRespuesta(false);
   };
 
   useEffect(() => {
