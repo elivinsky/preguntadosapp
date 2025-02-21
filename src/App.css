@@ -1,2 +1,99 @@
-main {
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.categoria-selector {
+  margin: 20px 0;
+}
+
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.categoria-btn {
+  padding: 15px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.categoria-btn:hover {
+  background-color: #45a049;
+}
+
+.pregunta {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.opciones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.opcion-btn {
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.opcion-btn:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.opcion-btn.correcta {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #45a049;
+}
+
+.opcion-btn.incorrecta {
+  background-color: #f44336;
+  color: white;
+  border-color: #da190b;
+}
+
+.controles {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.controles button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  background-color: #2196F3;
+  color: white;
+  cursor: pointer;
+}
+
+.controles button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.controles button:hover:not(:disabled) {
+  background-color: #1976D2;
 }

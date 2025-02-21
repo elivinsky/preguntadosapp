@@ -1,0 +1,50 @@
+
+{
+  "Geografia": [
+    {
+      "pregunta": "¿Cuál es el río más largo del mundo?",
+      "opciones": ["Nilo", "Amazonas", "Mississippi", "Yangtsé"],
+      "respuestaCorrecta": "Amazonas"
+    },
+    {
+      "pregunta": "¿Cuál es el país más grande del mundo?",
+      "opciones": ["China", "Estados Unidos", "Canadá", "Rusia"],
+      "respuestaCorrecta": "Rusia"
+    }
+  ],
+  "Ciencia": [
+    {
+      "pregunta": "¿Cuál es el elemento químico más abundante en el universo?",
+      "opciones": ["Oxígeno", "Carbono", "Hidrógeno", "Helio"],
+      "respuestaCorrecta": "Hidrógeno"
+    }
+  ],
+  "Deportes": [
+    {
+      "pregunta": "¿En qué deporte se utiliza un disco?",
+      "opciones": ["Hockey", "Golf", "Tenis", "Fútbol"],
+      "respuestaCorrecta": "Hockey"
+    }
+  ],
+  "Entretenimiento": [
+    {
+      "pregunta": "¿Quién dirigió la película Titanic?",
+      "opciones": ["Steven Spielberg", "James Cameron", "Martin Scorsese", "Christopher Nolan"],
+      "respuestaCorrecta": "James Cameron"
+    }
+  ],
+  "Arte": [
+    {
+      "pregunta": "¿Quién pintó la Mona Lisa?",
+      "opciones": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Miguel Ángel"],
+      "respuestaCorrecta": "Leonardo da Vinci"
+    }
+  ],
+  "Historia": [
+    {
+      "pregunta": "¿En qué año terminó la Segunda Guerra Mundial?",
+      "opciones": ["1943", "1944", "1945", "1946"],
+      "respuestaCorrecta": "1945"
+    }
+  ]
+}
