@@ -1,0 +1,609 @@
+{
+  "Geografia": [
+    {
+      "pregunta": "¿Cuál es la capital de Italia?",
+      "opciones": ["Madrid", "Lisboa", "Roma", "París"],
+      "respuestaCorrecta": "Roma"
+    },
+    {
+      "pregunta": "¿En qué continente se encuentra Egipto?",
+      "opciones": ["Asia", "África", "Europa", "Oceanía"],
+      "respuestaCorrecta": "África"
+    },
+    {
+      "pregunta": "¿Cuál es el país más grande del mundo en superficie?",
+      "opciones": ["Canadá", "China", "Estados Unidos", "Rusia"],
+      "respuestaCorrecta": "Rusia"
+    },
+    {
+      "pregunta": "¿Qué océano está al oeste de América?",
+      "opciones": ["Atlántico", "Índico", "Pacífico", "Ártico"],
+      "respuestaCorrecta": "Pacífico"
+    },
+    {
+      "pregunta": "¿Cuál es el desierto más grande del mundo?",
+      "opciones": ["Sahara", "Gobi", "Kalahari", "Atacama"],
+      "respuestaCorrecta": "Sahara"
+    },
+    {
+      "pregunta": "¿Qué país tiene la mayor cantidad de habitantes?",
+      "opciones": ["India", "Estados Unidos", "Brasil", "China"],
+      "respuestaCorrecta": "China"
+    },
+    {
+      "pregunta": "¿Cuál es la montaña más alta del mundo?",
+      "opciones": ["Mont Blanc", "Monte Everest", "Kilimanjaro", "Aconcagua"],
+      "respuestaCorrecta": "Monte Everest"
+    },
+    {
+      "pregunta": "¿Qué mar separa Europa de África?",
+      "opciones": ["Mar Negro", "Mar del Norte", "Mar Mediterráneo", "Mar Rojo"],
+      "respuestaCorrecta": "Mar Mediterráneo"
+    },
+    {
+      "pregunta": "¿Cuál de estos países no tiene salida al mar?",
+      "opciones": ["Argentina", "Paraguay", "México", "España"],
+      "respuestaCorrecta": "Paraguay"
+    },
+    {
+      "pregunta": "¿En qué país se encuentra la Torre de Pisa?",
+      "opciones": ["Francia", "Italia", "Alemania", "Portugal"],
+      "respuestaCorrecta": "Italia"
+    },
+    {
+      "pregunta": "¿Qué país tiene la selva amazónica?",
+      "opciones": ["Perú", "Brasil", "Colombia", "Venezuela"],
+      "respuestaCorrecta": "Brasil"
+    },
+    {
+      "pregunta": "¿Qué país es conocido como 'La tierra del sol naciente'?",
+      "opciones": ["China", "Corea del Sur", "Japón", "Vietnam"],
+      "respuestaCorrecta": "Japón"
+    },
+    {
+      "pregunta": "¿Cuál es el río más largo del mundo?",
+      "opciones": ["Amazonas", "Nilo", "Yangtsé", "Misisipi"],
+      "respuestaCorrecta": "Amazonas"
+    },
+    {
+      "pregunta": "¿Cuál de estos países pertenece a América Central?",
+      "opciones": ["Argentina", "Costa Rica", "Chile", "Uruguay"],
+      "respuestaCorrecta": "Costa Rica"
+    },
+    {
+      "pregunta": "¿Qué país tiene forma de bota en el mapa?",
+      "opciones": ["España", "Italia", "Grecia", "Turquía"],
+      "respuestaCorrecta": "Italia"
+    },
+    {
+      "pregunta": "¿Cuál es el lago más grande del mundo?",
+      "opciones": ["Lago Superior", "Lago Titicaca", "Lago Baikal", "Mar Caspio"],
+      "respuestaCorrecta": "Mar Caspio"
+    },
+    {
+      "pregunta": "¿En qué país se encuentra la Gran Muralla China?",
+      "opciones": ["Japón", "India", "Corea del Norte", "China"],
+      "respuestaCorrecta": "China"
+    },
+    {
+      "pregunta": "¿Cuál es la capital de Canadá?",
+      "opciones": ["Toronto", "Montreal", "Vancouver", "Ottawa"],
+      "respuestaCorrecta": "Ottawa"
+    },
+    {
+      "pregunta": "¿En qué océano se encuentra la isla de Madagascar?",
+      "opciones": ["Atlántico", "Índico", "Pacífico", "Ártico"],
+      "respuestaCorrecta": "Índico"
+    },
+    {
+      "pregunta": "¿Cuál es la capital de Australia?",
+      "opciones": ["Melbourne", "Sídney", "Canberra", "Brisbane"],
+      "respuestaCorrecta": "Canberra"
+    }
+  ],
+  "Ciencia": [
+    {
+      "pregunta": "¿Cuál es el planeta más grande del sistema solar?",
+      "opciones": ["Marte", "Tierra", "Júpiter", "Saturno"],
+      "respuestaCorrecta": "Júpiter"
+    },
+    {
+      "pregunta": "¿Cuál es el elemento químico más abundante en el universo?",
+      "opciones": ["Oxígeno", "Hidrógeno", "Carbono", "Helio"],
+      "respuestaCorrecta": "Hidrógeno"
+    },
+    {
+      "pregunta": "¿Qué tipo de animal es un tiburón?",
+      "opciones": ["Pez", "Mamífero", "Reptil", "Anfibio"],
+      "respuestaCorrecta": "Pez"
+    },
+    {
+      "pregunta": "¿Cómo se llama el proceso por el cual las plantas producen su propio alimento?",
+      "opciones": ["Respiración", "Fotosíntesis", "Digestión", "Fermentación"],
+      "respuestaCorrecta": "Fotosíntesis"
+    },
+    {
+      "pregunta": "¿Cuál es el órgano más grande del cuerpo humano?",
+      "opciones": ["Corazón", "Pulmones", "Hígado", "Piel"],
+      "respuestaCorrecta": "Piel"
+    },
+    {
+      "pregunta": "¿Qué gas expulsamos al respirar?",
+      "opciones": ["Oxígeno", "Nitrógeno", "Dióxido de carbono", "Helio"],
+      "respuestaCorrecta": "Dióxido de carbono"
+    },
+    {
+      "pregunta": "¿Cuál es el hueso más largo del cuerpo humano?",
+      "opciones": ["Fémur", "Radio", "Húmero", "Tibia"],
+      "respuestaCorrecta": "Fémur"
+    },
+    {
+      "pregunta": "¿Cómo se llama la capa de gases que rodea la Tierra?",
+      "opciones": ["Litosfera", "Atmósfera", "Biosfera", "Hidrosfera"],
+      "respuestaCorrecta": "Atmósfera"
+    },
+    {
+      "pregunta": "¿Cuántos cromosomas tiene el ser humano?",
+      "opciones": ["23", "32", "46", "50"],
+      "respuestaCorrecta": "46"
+    },
+    {
+      "pregunta": "¿Cuál es el único metal que es líquido a temperatura ambiente?",
+      "opciones": ["Plomo", "Aluminio", "Mercurio", "Cobre"],
+      "respuestaCorrecta": "Mercurio"
+    },
+    {
+      "pregunta": "¿Cómo se llama el satélite natural de la Tierra?",
+      "opciones": ["Sol", "Marte", "Luna", "Venus"],
+      "respuestaCorrecta": "Luna"
+    },
+    {
+      "pregunta": "¿Cuál es la función principal de los glóbulos rojos?",
+      "opciones": ["Defender el cuerpo", "Transportar oxígeno", "Digestión", "Producir hormonas"],
+      "respuestaCorrecta": "Transportar oxígeno"
+    },
+    {
+      "pregunta": "¿Cuál es el metal más liviano?",
+      "opciones": ["Aluminio", "Oro", "Litio", "Plata"],
+      "respuestaCorrecta": "Litio"
+    },
+    {
+      "pregunta": "¿Qué científico formuló la teoría de la relatividad?",
+      "opciones": ["Isaac Newton", "Galileo Galilei", "Nikola Tesla", "Albert Einstein"],
+      "respuestaCorrecta": "Albert Einstein"
+    },
+    {
+      "pregunta": "¿Qué órgano del cuerpo humano produce insulina?",
+      "opciones": ["Riñón", "Hígado", "Páncreas", "Estómago"],
+      "respuestaCorrecta": "Páncreas"
+    },
+    {
+      "pregunta": "¿Qué parte de la célula contiene el ADN?",
+      "opciones": ["Mitocondria", "Membrana", "Núcleo", "Ribosoma"],
+      "respuestaCorrecta": "Núcleo"
+    },
+    {
+      "pregunta": "¿Cuántos planetas tiene el sistema solar?",
+      "opciones": ["7", "8", "9", "10"],
+      "respuestaCorrecta": "8"
+    },
+    {
+      "pregunta": "¿Qué gas es necesario para la respiración humana?",
+      "opciones": ["Hidrógeno", "Oxígeno", "Dióxido de carbono", "Nitrógeno"],
+      "respuestaCorrecta": "Oxígeno"
+    },
+    {
+      "pregunta": "¿Qué animal es conocido por su capacidad de cambiar de color?",
+      "opciones": ["Cangrejo", "Camaleón", "Tiburón", "Águila"],
+      "respuestaCorrecta": "Camaleón"
+    },
+    {
+      "pregunta": "¿Qué científico descubrió la ley de la gravedad?",
+      "opciones": ["Albert Einstein", "Galileo Galilei", "Isaac Newton", "Marie Curie"],
+      "respuestaCorrecta": "Isaac Newton"
+    }
+  ],  
+  "Deportes": [
+    {
+      "pregunta": "¿Cuántos jugadores tiene un equipo de fútbol en el campo?",
+      "opciones": ["9", "10", "11", "12"],
+      "respuestaCorrecta": "11"
+    },
+    {
+      "pregunta": "¿En qué país se originó el fútbol?",
+      "opciones": ["Brasil", "Alemania", "Inglaterra", "España"],
+      "respuestaCorrecta": "Inglaterra"
+    },
+    {
+      "pregunta": "¿Cuántos puntos vale un triple en baloncesto?",
+      "opciones": ["1", "2", "3", "4"],
+      "respuestaCorrecta": "3"
+    },
+    {
+      "pregunta": "¿Qué deporte se juega en Wimbledon?",
+      "opciones": ["Fútbol", "Béisbol", "Tenis", "Rugby"],
+      "respuestaCorrecta": "Tenis"
+    },
+    {
+      "pregunta": "¿Cuántos anillos olímpicos hay en la bandera de los Juegos Olímpicos?",
+      "opciones": ["4", "5", "6", "7"],
+      "respuestaCorrecta": "5"
+    },
+    {
+      "pregunta": "¿Cuál es el país con más Copas del Mundo de Fútbol ganadas?",
+      "opciones": ["Argentina", "Italia", "Brasil", "Alemania"],
+      "respuestaCorrecta": "Brasil"
+    },
+    {
+      "pregunta": "¿Cuál de estos deportes se juega con un disco en lugar de una pelota?",
+      "opciones": ["Béisbol", "Hockey sobre hielo", "Balonmano", "Golf"],
+      "respuestaCorrecta": "Hockey sobre hielo"
+    },
+    {
+      "pregunta": "¿Cuánto dura un partido de fútbol profesional?",
+      "opciones": ["60 minutos", "75 minutos", "90 minutos", "120 minutos"],
+      "respuestaCorrecta": "90 minutos"
+    },
+    {
+      "pregunta": "¿Qué deporte se juega en la NBA?",
+      "opciones": ["Fútbol", "Béisbol", "Baloncesto", "Hockey"],
+      "respuestaCorrecta": "Baloncesto"
+    },
+    {
+      "pregunta": "¿Qué país ganó el Mundial de Fútbol 2018?",
+      "opciones": ["Argentina", "Brasil", "Francia", "Alemania"],
+      "respuestaCorrecta": "Francia"
+    },
+    {
+      "pregunta": "¿Cuántos jugadores hay en un equipo de voleibol en la cancha?",
+      "opciones": ["4", "5", "6", "7"],
+      "respuestaCorrecta": "6"
+    },
+    {
+      "pregunta": "¿Quién es conocido como 'El Rey' en el fútbol?",
+      "opciones": ["Cristiano Ronaldo", "Pelé", "Lionel Messi", "Maradona"],
+      "respuestaCorrecta": "Pelé"
+    },
+    {
+      "pregunta": "¿Qué deporte practican los pilotos de Fórmula 1?",
+      "opciones": ["Ciclismo", "Automovilismo", "Atletismo", "Motocross"],
+      "respuestaCorrecta": "Automovilismo"
+    },
+    {
+      "pregunta": "¿Cuántos sets se deben ganar en un partido de tenis para obtener la victoria?",
+      "opciones": ["1", "2", "3", "4"],
+      "respuestaCorrecta": "3"
+    },
+    {
+      "pregunta": "¿Qué país ha ganado más medallas en la historia de los Juegos Olímpicos?",
+      "opciones": ["China", "Estados Unidos", "Rusia", "Alemania"],
+      "respuestaCorrecta": "Estados Unidos"
+    },
+    {
+      "pregunta": "¿Qué es un 'strike' en el béisbol?",
+      "opciones": ["Un tipo de lanzamiento", "Cuando el bateador falla", "Un punto anotado", "Una falta"],
+      "respuestaCorrecta": "Cuando el bateador falla"
+    },
+    {
+      "pregunta": "¿En qué deporte se usa la red más alta?",
+      "opciones": ["Baloncesto", "Voleibol", "Tenis", "Badminton"],
+      "respuestaCorrecta": "Voleibol"
+    },
+    {
+      "pregunta": "¿Quién tiene el récord de más goles en la historia del fútbol?",
+      "opciones": ["Cristiano Ronaldo", "Pelé", "Lionel Messi", "Diego Maradona"],
+      "respuestaCorrecta": "Cristiano Ronaldo"
+    },
+    {
+      "pregunta": "¿Cuál es el trofeo que se entrega en la NBA?",
+      "opciones": ["Copa del Rey", "Trofeo Lombardi", "Trofeo Larry O'Brien", "Copa América"],
+      "respuestaCorrecta": "Trofeo Larry O'Brien"
+    },
+    {
+      "pregunta": "¿Cuál es el deporte nacional de Japón?",
+      "opciones": ["Sumo", "Judo", "Karate", "Béisbol"],
+      "respuestaCorrecta": "Sumo"
+    }
+  ],
+  "Entretenimiento": [
+    {
+      "pregunta": "¿Cuál es la película con mayor recaudación en la historia del cine?",
+      "opciones": ["Avatar", "Titanic", "Avengers: Endgame", "El Rey León"],
+      "respuestaCorrecta": "Avatar"
+    },
+    {
+      "pregunta": "¿Quién es el creador del universo cinematográfico de Marvel?",
+      "opciones": ["Stan Lee", "Kevin Feige", "James Gunn", "Joss Whedon"],
+      "respuestaCorrecta": "Kevin Feige"
+    },
+    {
+      "pregunta": "¿Cómo se llama el protagonista de la serie 'Breaking Bad'?",
+      "opciones": ["Jesse Pinkman", "Saul Goodman", "Walter White", "Hank Schrader"],
+      "respuestaCorrecta": "Walter White"
+    },
+    {
+      "pregunta": "¿En qué año se estrenó la primera película de 'Harry Potter'?",
+      "opciones": ["1999", "2001", "2003", "2005"],
+      "respuestaCorrecta": "2001"
+    },
+    {
+      "pregunta": "¿Cuál es el nombre del protagonista de 'Piratas del Caribe'?",
+      "opciones": ["Jack Sparrow", "Hector Barbossa", "Will Turner", "Davy Jones"],
+      "respuestaCorrecta": "Jack Sparrow"
+    },
+    {
+      "pregunta": "¿Quién es el cantante de la banda británica 'Queen'?",
+      "opciones": ["Freddie Mercury", "Mick Jagger", "Paul McCartney", "David Bowie"],
+      "respuestaCorrecta": "Freddie Mercury"
+    },
+    {
+      "pregunta": "¿Qué saga de películas cuenta la historia de los Skywalker?",
+      "opciones": ["Star Trek", "El Señor de los Anillos", "Star Wars", "Guardianes de la Galaxia"],
+      "respuestaCorrecta": "Star Wars"
+    },
+    {
+      "pregunta": "¿Quién interpretó a 'Iron Man' en el universo cinematográfico de Marvel?",
+      "opciones": ["Chris Evans", "Robert Downey Jr.", "Chris Hemsworth", "Mark Ruffalo"],
+      "respuestaCorrecta": "Robert Downey Jr."
+    },
+    {
+      "pregunta": "¿Cómo se llama el mejor amigo de Shrek?",
+      "opciones": ["Gato con Botas", "Burro", "Lord Farquaad", "Fiona"],
+      "respuestaCorrecta": "Burro"
+    },
+    {
+      "pregunta": "¿Cuál es la serie animada protagonizada por un niño genio con un laboratorio secreto?",
+      "opciones": ["Jimmy Neutrón", "Dexter's Laboratory", "El Laboratorio de Flint", "Rick and Morty"],
+      "respuestaCorrecta": "Dexter's Laboratory"
+    },
+    {
+      "pregunta": "¿Qué personaje dice 'Hakuna Matata' en 'El Rey León'?",
+      "opciones": ["Simba", "Scar", "Timon y Pumba", "Mufasa"],
+      "respuestaCorrecta": "Timon y Pumba"
+    },
+    {
+      "pregunta": "¿Qué director es conocido por películas como 'Inception' y 'Interstellar'?",
+      "opciones": ["Steven Spielberg", "Christopher Nolan", "Quentin Tarantino", "James Cameron"],
+      "respuestaCorrecta": "Christopher Nolan"
+    },
+    {
+      "pregunta": "¿Cómo se llama el personaje principal de la serie 'Stranger Things'?",
+      "opciones": ["Mike Wheeler", "Eleven", "Dustin Henderson", "Will Byers"],
+      "respuestaCorrecta": "Eleven"
+    },
+    {
+      "pregunta": "¿Qué videojuego es conocido por su batalla entre impostores y tripulantes?",
+      "opciones": ["Among Us", "Fortnite", "Minecraft", "League of Legends"],
+      "respuestaCorrecta": "Among Us"
+    },
+    {
+      "pregunta": "¿Quién canta la canción 'Shape of You'?",
+      "opciones": ["Shawn Mendes", "Justin Bieber", "Ed Sheeran", "Bruno Mars"],
+      "respuestaCorrecta": "Ed Sheeran"
+    },
+    {
+      "pregunta": "¿En qué película aparece el personaje 'Thanos'?",
+      "opciones": ["Thor: Ragnarok", "Avengers: Infinity War", "Capitán América: Civil War", "Spider-Man: No Way Home"],
+      "respuestaCorrecta": "Avengers: Infinity War"
+    },
+    {
+      "pregunta": "¿Cómo se llama el perro de Mickey Mouse?",
+      "opciones": ["Goofy", "Pluto", "Donald", "Max"],
+      "respuestaCorrecta": "Pluto"
+    },
+    {
+      "pregunta": "¿Qué personaje de Disney pierde un zapato de cristal?",
+      "opciones": ["Blancanieves", "Cenicienta", "Ariel", "Bella"],
+      "respuestaCorrecta": "Cenicienta"
+    },
+    {
+      "pregunta": "¿Cuál es el nombre del parque temático de Disney en Florida?",
+      "opciones": ["Disneyland", "Magic Kingdom", "Disney World", "Epcot"],
+      "respuestaCorrecta": "Disney World"
+    }
+  ],
+  "Arte": [
+    {
+      "pregunta": "¿Quién pintó la Mona Lisa?",
+      "opciones": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+      "respuestaCorrecta": "Leonardo da Vinci"
+    },
+    {
+      "pregunta": "¿En qué país nació Pablo Picasso?",
+      "opciones": ["Italia", "España", "Francia", "Países Bajos"],
+      "respuestaCorrecta": "España"
+    },
+    {
+      "pregunta": "¿Cuál de estos artistas es famoso por sus pinturas de girasoles?",
+      "opciones": ["Salvador Dalí", "Frida Kahlo", "Vincent van Gogh", "Diego Rivera"],
+      "respuestaCorrecta": "Vincent van Gogh"
+    },
+    {
+      "pregunta": "¿Qué técnica de pintura utiliza pigmentos mezclados con agua sobre yeso húmedo?",
+      "opciones": ["Óleo", "Acuarela", "Fresco", "Acrílico"],
+      "respuestaCorrecta": "Fresco"
+    },
+    {
+      "pregunta": "¿Quién pintó 'La última cena'?",
+      "opciones": ["Rafael", "Leonardo da Vinci", "Miguel Ángel", "Caravaggio"],
+      "respuestaCorrecta": "Leonardo da Vinci"
+    },
+    {
+      "pregunta": "¿A qué movimiento artístico pertenece Salvador Dalí?",
+      "opciones": ["Cubismo", "Impresionismo", "Surrealismo", "Expresionismo"],
+      "respuestaCorrecta": "Surrealismo"
+    },
+    {
+      "pregunta": "¿Cómo se llama la técnica escultórica en la que se talla directamente en piedra o madera?",
+      "opciones": ["Modelado", "Talla", "Fundición", "Ensamblaje"],
+      "respuestaCorrecta": "Talla"
+    },
+    {
+      "pregunta": "¿Quién esculpió la estatua del 'David'?",
+      "opciones": ["Donatello", "Miguel Ángel", "Bernini", "Rodin"],
+      "respuestaCorrecta": "Miguel Ángel"
+    },
+    {
+      "pregunta": "¿Qué artista mexicano es famoso por sus murales y estuvo casado con Frida Kahlo?",
+      "opciones": ["David Alfaro Siqueiros", "Diego Rivera", "José Clemente Orozco", "Rufino Tamayo"],
+      "respuestaCorrecta": "Diego Rivera"
+    },
+    {
+      "pregunta": "¿En qué ciudad se encuentra la Capilla Sixtina?",
+      "opciones": ["Florencia", "Roma", "París", "Madrid"],
+      "respuestaCorrecta": "Roma"
+    },
+    {
+      "pregunta": "¿Quién pintó 'El grito'?",
+      "opciones": ["Edvard Munch", "Gustav Klimt", "Francisco de Goya", "Egon Schiele"],
+      "respuestaCorrecta": "Edvard Munch"
+    },
+    {
+      "pregunta": "¿Qué arquitecto diseñó la Sagrada Familia en Barcelona?",
+      "opciones": ["Frank Gehry", "Antoni Gaudí", "Le Corbusier", "Zaha Hadid"],
+      "respuestaCorrecta": "Antoni Gaudí"
+    },
+    {
+      "pregunta": "¿Cuál es el nombre del famoso museo de arte en París donde se encuentra la Mona Lisa?",
+      "opciones": ["Museo del Prado", "Louvre", "Tate Modern", "MET"],
+      "respuestaCorrecta": "Louvre"
+    },
+    {
+      "pregunta": "¿A qué estilo artístico pertenece el artista Claude Monet?",
+      "opciones": ["Barroco", "Cubismo", "Impresionismo", "Dadaísmo"],
+      "respuestaCorrecta": "Impresionismo"
+    },
+    {
+      "pregunta": "¿Qué pintor español es conocido por su obra 'Las Meninas'?",
+      "opciones": ["Francisco de Goya", "Diego Velázquez", "El Greco", "Joan Miró"],
+      "respuestaCorrecta": "Diego Velázquez"
+    },
+    {
+      "pregunta": "¿Quién es el autor de la escultura 'El Pensador'?",
+      "opciones": ["Auguste Rodin", "Gian Lorenzo Bernini", "Donatello", "Michelangelo"],
+      "respuestaCorrecta": "Auguste Rodin"
+    },
+    {
+      "pregunta": "¿Qué artista pintó el 'Guernica'?",
+      "opciones": ["Pablo Picasso", "Salvador Dalí", "Joan Miró", "Francisco de Goya"],
+      "respuestaCorrecta": "Pablo Picasso"
+    },
+    {
+      "pregunta": "¿Qué movimiento artístico se caracteriza por el uso de formas geométricas y colores primarios?",
+      "opciones": ["Surrealismo", "Expresionismo", "Cubismo", "Neoplasticismo"],
+      "respuestaCorrecta": "Neoplasticismo"
+    },
+    {
+      "pregunta": "¿Qué artista es conocido por sus obras con puntos de colores?",
+      "opciones": ["Damien Hirst", "Yayoi Kusama", "Jackson Pollock", "Jean-Michel Basquiat"],
+      "respuestaCorrecta": "Yayoi Kusama"
+    },
+    {
+      "pregunta": "¿Qué escultor creó 'La Piedad'?",
+      "opciones": ["Rodin", "Bernini", "Miguel Ángel", "Canova"],
+      "respuestaCorrecta": "Miguel Ángel"
+    }
+  ],
+  "Historia": [
+    {
+      "pregunta": "¿En qué año ocurrió la Revolución Francesa?",
+      "opciones": ["1776", "1789", "1804", "1815"],
+      "respuestaCorrecta": "1789"
+    },
+    {
+      "pregunta": "¿Quién fue el primer presidente de los Estados Unidos?",
+      "opciones": ["Thomas Jefferson", "George Washington", "Abraham Lincoln", "John Adams"],
+      "respuestaCorrecta": "George Washington"
+    },
+    {
+      "pregunta": "¿Qué civilización construyó las pirámides de Egipto?",
+      "opciones": ["Romanos", "Mayas", "Egipcios", "Griegos"],
+      "respuestaCorrecta": "Egipcios"
+    },
+    {
+      "pregunta": "¿En qué año terminó la Segunda Guerra Mundial?",
+      "opciones": ["1943", "1945", "1950", "1939"],
+      "respuestaCorrecta": "1945"
+    },
+    {
+      "pregunta": "¿Quién fue el líder del Imperio Romano cuando ocurrió la caída de Roma en el 476 d.C.?",
+      "opciones": ["Julio César", "Constantino", "Rómulo Augústulo", "Nerón"],
+      "respuestaCorrecta": "Rómulo Augústulo"
+    },
+    {
+      "pregunta": "¿Qué país fue el primero en enviar un ser humano al espacio?",
+      "opciones": ["Estados Unidos", "China", "Alemania", "Unión Soviética"],
+      "respuestaCorrecta": "Unión Soviética"
+    },
+    {
+      "pregunta": "¿Quién descubrió América en 1492?",
+      "opciones": ["Fernando de Magallanes", "Cristóbal Colón", "Hernán Cortés", "Vasco da Gama"],
+      "respuestaCorrecta": "Cristóbal Colón"
+    },
+    {
+      "pregunta": "¿Cuál fue la civilización que construyó Machu Picchu?",
+      "opciones": ["Aztecas", "Incas", "Mayas", "Olmecas"],
+      "respuestaCorrecta": "Incas"
+    },
+    {
+      "pregunta": "¿Qué tratado puso fin a la Primera Guerra Mundial?",
+      "opciones": ["Tratado de Tordesillas", "Tratado de París", "Tratado de Versalles", "Tratado de Utrecht"],
+      "respuestaCorrecta": "Tratado de Versalles"
+    },
+    {
+      "pregunta": "¿En qué año cayó el Muro de Berlín?",
+      "opciones": ["1987", "1989", "1991", "1993"],
+      "respuestaCorrecta": "1989"
+    },
+    {
+      "pregunta": "¿Cuál fue la primera civilización de la humanidad?",
+      "opciones": ["Egipcia", "Mesopotámica", "China", "Griega"],
+      "respuestaCorrecta": "Mesopotámica"
+    },
+    {
+      "pregunta": "¿Quién fue el líder de la Revolución Cubana?",
+      "opciones": ["Che Guevara", "Fidel Castro", "Hugo Chávez", "José Martí"],
+      "respuestaCorrecta": "Fidel Castro"
+    },
+    {
+      "pregunta": "¿Qué país utilizó la primera bomba atómica en la historia?",
+      "opciones": ["Alemania", "Rusia", "Estados Unidos", "Japón"],
+      "respuestaCorrecta": "Estados Unidos"
+    },
+    {
+      "pregunta": "¿Quién escribió 'El Manifiesto Comunista'?",
+      "opciones": ["Karl Marx y Friedrich Engels", "Adam Smith", "John Locke", "Vladimir Lenin"],
+      "respuestaCorrecta": "Karl Marx y Friedrich Engels"
+    },
+    {
+      "pregunta": "¿En qué año se independizó Argentina?",
+      "opciones": ["1806", "1810", "1816", "1821"],
+      "respuestaCorrecta": "1816"
+    },
+    {
+      "pregunta": "¿Quién fue el emperador francés que conquistó gran parte de Europa en el siglo XIX?",
+      "opciones": ["Luis XIV", "Carlomagno", "Napoleón Bonaparte", "Francisco José I"],
+      "respuestaCorrecta": "Napoleón Bonaparte"
+    },
+    {
+      "pregunta": "¿En qué año ocurrió el atentado a las Torres Gemelas?",
+      "opciones": ["1999", "2001", "2003", "2005"],
+      "respuestaCorrecta": "2001"
+    },
+    {
+      "pregunta": "¿Qué país construyó la Gran Muralla China?",
+      "opciones": ["Japón", "India", "Mongolia", "China"],
+      "respuestaCorrecta": "China"
+    },
+    {
+      "pregunta": "¿Quién fue el primer ser humano en pisar la Luna?",
+      "opciones": ["Buzz Aldrin", "Neil Armstrong", "Yuri Gagarin", "Michael Collins"],
+      "respuestaCorrecta": "Neil Armstrong"
+    },
+    {
+      "pregunta": "¿Cuál fue el conflicto militar que dividió a Vietnam en dos bandos?",
+      "opciones": ["Guerra del Golfo", "Guerra de Vietnam", "Guerra de Corea", "Guerra Civil Española"],
+      "respuestaCorrecta": "Guerra de Vietnam"
+    }
+  ]
+}

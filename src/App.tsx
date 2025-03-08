@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import questionsData from './data/questions.json';
+import questionsData from './data/easy_questions.json';
 import './App.css';
 import { IoEarth } from "react-icons/io5";
 import { GiChemicalDrop as GiChemicalDropIcon, GiSoccerBall } from "react-icons/gi";
