@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import questionsData from './data/easy_questions.json';
-import './App.css';
+import questionsData from './data/questions.json';
+import './App.scss';
 import { IoEarth } from "react-icons/io5";
 import { GiChemicalDrop as GiChemicalDropIcon, GiSoccerBall } from "react-icons/gi";
 import { IoIosArrowBack } from "react-icons/io";
 import { MdTheaterComedy } from "react-icons/md";
-import { FaPaintBrush, FaLandmark, FaBomb } from 'react-icons/fa';
+import { FaPaintBrush, FaLandmark } from 'react-icons/fa';
 import { RiResetLeftFill } from "react-icons/ri";
-import { LiaBombSolid } from "react-icons/lia";
-import { RxReset } from "react-icons/rx";
 import incorrectSound from './assets/audio/incorrect.mp3';
 import correctSound from './assets/audio/correct.mp3';
 
@@ -30,7 +28,16 @@ const categoryIcons = {
   Historia: FaLandmark
 };
 
+const defaultEquipos = Array.from({length: 8}, (_, i) => ({
+  nombre: '',
+  puntos: 0,
+}));
+
 type Categoria = keyof typeof questionsData;
+type Equipo = {
+  nombre: string;
+  puntos: number;
+};
 
 export default function App() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState<Categoria | null>(null);
@@ -42,42 +49,39 @@ export default function App() {
   const [dobleChanceUsada, setDobleChanceUsada] = useState<boolean>(false);
   const [opcionesSeleccionadas, setOpcionesSeleccionadas] = useState<string[]>([]);
 
+  const [equipos, setEquipos] = useState<Equipo[]>(defaultEquipos);
+
   const categorias = Object.keys(questionsData) as Categoria[];
 
-  // Cargar preguntas usadas desde localStorage al iniciar
+  // Levantar de localStorage
   useEffect(() => {
     const storedPreguntasUsadas = localStorage.getItem('preguntasUsadas');
     if (storedPreguntasUsadas) {
       setPreguntasUsadas(new Set(JSON.parse(storedPreguntasUsadas)));
     }
+
+    const storedEquipos = localStorage.getItem('equipos');
+    console.log(storedEquipos);
+    if (storedEquipos) {
+      setEquipos(JSON.parse(storedEquipos));
+    }
   }, []);
 
-  // Guardar preguntas usadas en localStorage cuando cambian
+  // Guardar localStorage
   useEffect(() => {
     localStorage.setItem('preguntasUsadas', JSON.stringify(Array.from(preguntasUsadas)));
   }, [preguntasUsadas]);
+  useEffect(() => {
+    localStorage.setItem('equipos', JSON.stringify(equipos));
+  }, [equipos]);
 
   // Reiniciar estados al cambiar de pregunta
   useEffect(() => {
     if (categoriaSeleccionada) {
       obtenerPreguntaAleatoria();
-      setDobleChanceUsada(false);
       setOpcionesSeleccionadas([]);
     }
   }, [categoriaSeleccionada]);
-
-  // Reproducir sonido cuando se seleccionan dos opciones en Doble Chance
-  useEffect(() => {
-    if (dobleChanceUsada && opcionesSeleccionadas.length === 2) {
-      const esCorrecta = opcionesSeleccionadas.includes(preguntaActual.respuestaCorrecta);
-      if (esCorrecta) {
-        new Audio(correctSound).play();
-      } else {
-        new Audio(incorrectSound).play();
-      }
-      setMostrarRespuesta(true);
-    }
-  }, [opcionesSeleccionadas, dobleChanceUsada, preguntaActual]);
 
   const obtenerPreguntaAleatoria = () => {
     if (!categoriaSeleccionada) return;
@@ -102,77 +106,44 @@ export default function App() {
   };
 
   const verificarRespuesta = (opcion: string) => {
-    if (dobleChanceUsada) {
-      if (opcionesSeleccionadas.length >= 2) return;
-  
-      // Si la primera opción seleccionada es correcta, marcarla como correcta y reproducir el sonido
-      if (opcionesSeleccionadas.length === 0 && opcion === preguntaActual.respuestaCorrecta) {
-        new Audio(correctSound).play();
-        setMostrarRespuesta(true);
-        setRespuestaSeleccionada(opcion);
-        return;
-      }
-  
-      setOpcionesSeleccionadas(prev => [...prev, opcion]);
+    if (opcion === preguntaActual.respuestaCorrecta) {
+      new Audio(correctSound).play();
     } else {
-      if (opcion === preguntaActual.respuestaCorrecta) {
-        new Audio(correctSound).play();
-      } else {
-        new Audio(incorrectSound).play();
-      }
-      setRespuestaSeleccionada(opcion);
-      setMostrarRespuesta(true);
+      new Audio(incorrectSound).play();
     }
-  };
-  
-  useEffect(() => {
-    // Solo ejecutar si la primera opción no fue correcta
-    if (dobleChanceUsada && opcionesSeleccionadas.length === 2) {
-      const esCorrecta = opcionesSeleccionadas.includes(preguntaActual.respuestaCorrecta);
-      if (esCorrecta) {
-        new Audio(correctSound).play();
-      } else {
-        new Audio(incorrectSound).play();
-      }
-      setMostrarRespuesta(true);
-    }
-  }, [opcionesSeleccionadas, dobleChanceUsada, preguntaActual]);
-
-  const usarDobleChance = () => {
-    if (!preguntaActual || mostrarRespuesta) return;
-    setDobleChanceUsada(true);
+    setRespuestaSeleccionada(opcion);
+    setMostrarRespuesta(true);
   };
 
   const reiniciarJuego = () => {
     setPreguntasUsadas(new Set());
     setCategoriaSeleccionada(null);
     setPreguntaActual(null);
+    setEquipos(defaultEquipos);
     localStorage.removeItem('preguntasUsadas');
+    localStorage.removeItem('equipos');
   };
 
-  const usarBomba = () => {
-    if (!preguntaActual || mostrarRespuesta) return;
+  const setNombreEquipo = (index: number, nombre: string) => {
+    setEquipos(prev => {
+      const nuevosEquipos = [...prev];
+      nuevosEquipos[index].nombre = nombre;
+      return nuevosEquipos;
+    });
+  };
 
-    const opcionesIncorrectas = preguntaActual.opciones.filter(
-      (opcion: string) =>
-        opcion !== preguntaActual.respuestaCorrecta &&
-        !opcionesDescartadas.includes(opcion)
-    );
-
-    const opcionesADescartar = opcionesIncorrectas
-      .sort(() => Math.random() - 0.5)
-      .slice(0, 2);
-
-    setOpcionesDescartadas(prev => [...prev, ...opcionesADescartar]);
+  const setPuntajeEquipo = (index: number, puntos: number) => {
+    setEquipos(prev => {
+      const nuevosEquipos = [...prev];
+      nuevosEquipos[index].puntos = puntos;
+      return nuevosEquipos;
+    });
   };
 
   return (
     <main className="container">
-      <h1>Juego de Preguntas</h1>
-
       {!categoriaSeleccionada ? (
         <div className="categoria-selector">
-          <h2>Selecciona una categoría:</h2>
           <div className="categorias">
             {categorias.map(categoria => (
               <button
@@ -181,7 +152,6 @@ export default function App() {
                 className="categoria-btn"
                 style={{
                   backgroundColor: categoryColors[categoria as keyof typeof categoryColors],
-                  color: 'white'
                 }}
               >
                 <span className="categoria-icon">{
@@ -191,6 +161,24 @@ export default function App() {
                 }</span>
                 {categoria}
               </button>
+            ))}
+          </div>
+          <div className="puntajes">
+            {equipos.map(({nombre, puntos}, i) => (
+                <div className="equipo" key={i}>
+                  <div>Equipo {i + 1}</div>
+                  <input
+                      type="text"
+                      value={nombre}
+                      onChange={(event) => setNombreEquipo(i, event.target.value)}
+                  />
+                  <input
+                      type="number"
+                      value={puntos}
+                      step={100}
+                      onChange={(event) => setPuntajeEquipo(i, +event.target.value)}
+                  />
+                </div>
             ))}
           </div>
         </div>
@@ -234,23 +222,7 @@ export default function App() {
               Volver
             </button>
             <button
-              className='bomb-btn'
-              onClick={usarBomba}
-              disabled={mostrarRespuesta || opcionesDescartadas.length > 0}
-            >
-              {React.createElement(LiaBombSolid as React.ComponentType)}
-              Bomba
-            </button>
-            <button
-              onClick={usarDobleChance}
-              className={`doble-chance-btn ${dobleChanceUsada ? 'usada' : ''}`}
-              disabled={mostrarRespuesta || dobleChanceUsada}
-            >
-              {React.createElement(RxReset as React.ComponentType)}
-              Doble
-            </button>
-            <button
-              onClick={reiniciarJuego}
+              onClick={() => reiniciarJuego()}
             >
               {React.createElement(RiResetLeftFill as React.ComponentType)}
               Reiniciar
